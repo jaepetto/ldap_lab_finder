@@ -30,8 +30,7 @@ if __name__ == "__main__":
     conn = Connection(LDAP_server, auto_bind=True)
     conn.search(settings.LDAP_BASE_DN, settings.LDAP_SEARCH_FILTER, attributes=settings.LDAP_ATTRIBUTES_TO_RETURN)
 
-    result = {}
-
+    # Finds the
     current_running_path = os.path.dirname(__file__)
     absolute_output_path = os.path.join(current_running_path, settings.OUTPUT_FILE)
     with open(settings.OUTPUT_FILE, 'w', newline='') as csvfile:
